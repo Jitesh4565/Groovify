@@ -1,5 +1,5 @@
 import { useSession } from "next-auth/react";
-
+import { signOut } from "next-auth/react";
 export default function Navbar() {
   const { data: session } = useSession();
 
@@ -44,7 +44,7 @@ export default function Navbar() {
                 {session?.user?.name || "Profile"}
               </a>
             </li>
-            <li><a href="/api/auth/signout">Logout</a></li>
+            <li><button onClick={() => signOut()}>Logout</button></li>
           </ul>
         </div>
       </div>
