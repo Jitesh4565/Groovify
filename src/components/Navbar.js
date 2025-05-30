@@ -1,5 +1,7 @@
 import { useSession } from "next-auth/react";
 import { signOut } from "next-auth/react";
+import Link from "next/link";
+import Image from "next/image";
 export default function Navbar() {
   const { data: session } = useSession();
 
@@ -25,7 +27,7 @@ export default function Navbar() {
         <div className="dropdown dropdown-end">
           <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
             <div className="w-10 rounded-full">
-              <img
+              <Image
                 alt="Profile"
                 src={
                   session?.user?.image ||
