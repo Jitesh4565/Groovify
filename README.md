@@ -19,4 +19,5 @@ Groovify is a Spotify homepage clone built with **Next.js**, **Tailwind CSS**, a
    cd groovify
 
 2. **Install Dependencies**
-   npm install
+   ```bash
+   -npm install
